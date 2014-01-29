@@ -4,12 +4,12 @@
   <IDENTIFICATION VERSION="1.2" XTLVERSION="1.2"/>
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="BUSINTERFACE">
-    <HEADERS HSCROLL="0" VSCROLL="38">
+    <HEADERS HSCROLL="0" VSCROLL="0">
       <VARIABLE COL_INDEX="0" COL_WIDTH="231" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Bus Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" IS_VISIBLE="FALSE" VIEWDISP="Bus Standard" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="3" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="IP Type" VIEWTYPE="HEADER"/>
-      <VARIABLE COL_INDEX="4" COL_WIDTH="215" IS_VISIBLE="TRUE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="4" COL_WIDTH="340" IS_VISIBLE="TRUE" VIEWDISP="IP Version" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="5" IS_VISIBLE="FALSE" VIEWDISP="IP Classification" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="6" IS_VISIBLE="FALSE" VIEWDISP="Type" VIEWTYPE="HEADER"/>
     </HEADERS>
@@ -20,27 +20,24 @@
       </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="20"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="17"/>
       <VARIABLE ID="pcp_ilmb" ROW_INDEX="3"/>
+      <VARIABLE ID="pcp_i_bram_ctrl" ROW_INDEX="7"/>
       <VARIABLE ID="pcp_dlmb" ROW_INDEX="2"/>
-      <VARIABLE ID="pcp_d_bram_ctrl" ROW_INDEX="9"/>
-      <VARIABLE ID="pcp_bram_block" ROW_INDEX="8"/>
+      <VARIABLE ID="pcp_d_bram_ctrl" ROW_INDEX="6"/>
+      <VARIABLE ID="pcp_bram_block" ROW_INDEX="5"/>
       <VARIABLE ID="pcp" ROW_INDEX="4"/>
-      <VARIABLE ID="debug_module" ROW_INDEX="12"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="18"/>
-      <VARIABLE ID="boot_i_bram_ctrl" ROW_INDEX="7"/>
-      <VARIABLE ID="boot_d_bram_ctrl" ROW_INDEX="6"/>
-      <VARIABLE ID="boot_bram_block" ROW_INDEX="5"/>
-      <VARIABLE ID="axi_openmac_0" ROW_INDEX="15"/>
-      <VARIABLE ID="axi_hostinterface_0" ROW_INDEX="14"/>
+      <VARIABLE ID="debug_module" ROW_INDEX="9"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="15"/>
       <VARIABLE ID="axi4lite" ROW_INDEX="1"/>
       <VARIABLE ID="axi4" ROW_INDEX="0"/>
-      <VARIABLE ID="pcp_intc" ROW_INDEX="13"/>
-      <VARIABLE ID="SPI_FLASH" ROW_INDEX="16"/>
-      <VARIABLE ID="RS232" ROW_INDEX="17"/>
-      <VARIABLE ID="MCB_DDR2" ROW_INDEX="11"/>
-      <VARIABLE ID="fit_timer_0" ROW_INDEX="19"/>
-      <VARIABLE ID="pcp_i_bram_ctrl" ROW_INDEX="10"/>
+      <VARIABLE ID="pcp_intc" ROW_INDEX="10"/>
+      <VARIABLE ID="MCB_DDR2" ROW_INDEX="8"/>
+      <VARIABLE ID="SPI_FLASH" ROW_INDEX="13"/>
+      <VARIABLE ID="RS232" ROW_INDEX="14"/>
+      <VARIABLE ID="axi_openmac_0" ROW_INDEX="12"/>
+      <VARIABLE ID="axi_hostinterface_0" ROW_INDEX="11"/>
+      <VARIABLE ID="fit_timer_0" ROW_INDEX="16"/>
     </SEQUENCES>
   </SET>
 
@@ -86,7 +83,7 @@
   </SET>
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
-    <HEADERS HSCROLL="0" VSCROLL="215">
+    <HEADERS HSCROLL="0" VSCROLL="71">
       <VARIABLE COL_INDEX="0" COL_WIDTH="299" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="385" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" IS_VISIBLE="FALSE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
@@ -102,36 +99,32 @@
       <VARIABLE COL_INDEX="11" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="4" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,630,200" VERSION="0"/>
-    <SET ID="axi_hostinterface_0" IS_EXPANDED="TRUE"/>
     <SET ID="fit_timer_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="irqOut_irq" PARENT="axi_hostinterface_0"/>
+        <VARIABLE ID="M_AXI_ACLK" INSTANCE="axi_hostinterface_0" PARENT="M_AXI_PCP"/>
       </SELECTIONS>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
-      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="21"/>
+      <VARIABLE ID="proc_sys_reset_0" ROW_INDEX="18"/>
       <VARIABLE ID="pcp_ilmb" ROW_INDEX="4"/>
+      <VARIABLE ID="pcp_i_bram_ctrl" ROW_INDEX="8"/>
       <VARIABLE ID="pcp_dlmb" ROW_INDEX="3"/>
-      <VARIABLE ID="pcp_d_bram_ctrl" ROW_INDEX="10"/>
-      <VARIABLE ID="pcp_bram_block" ROW_INDEX="9"/>
+      <VARIABLE ID="pcp_d_bram_ctrl" ROW_INDEX="7"/>
+      <VARIABLE ID="pcp_bram_block" ROW_INDEX="6"/>
       <VARIABLE ID="pcp" ROW_INDEX="5"/>
-      <VARIABLE ID="debug_module" ROW_INDEX="13"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="19"/>
-      <VARIABLE ID="boot_i_bram_ctrl" ROW_INDEX="8"/>
-      <VARIABLE ID="boot_d_bram_ctrl" ROW_INDEX="7"/>
-      <VARIABLE ID="boot_bram_block" ROW_INDEX="6"/>
-      <VARIABLE ID="axi_openmac_0" ROW_INDEX="16"/>
-      <VARIABLE ID="axi_hostinterface_0" IS_EXPANDED="TRUE" ROW_INDEX="15"/>
+      <VARIABLE ID="debug_module" ROW_INDEX="10"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="16"/>
       <VARIABLE ID="axi4lite" ROW_INDEX="2"/>
       <VARIABLE ID="axi4" ROW_INDEX="1"/>
-      <VARIABLE ID="pcp_intc" ROW_INDEX="14"/>
-      <VARIABLE ID="SPI_FLASH" ROW_INDEX="17"/>
-      <VARIABLE ID="RS232" ROW_INDEX="18"/>
-      <VARIABLE ID="MCB_DDR2" ROW_INDEX="12"/>
-      <VARIABLE ID="fit_timer_0" IS_EXPANDED="TRUE" ROW_INDEX="20"/>
-      <VARIABLE ID="pcp_i_bram_ctrl" ROW_INDEX="11"/>
+      <VARIABLE ID="pcp_intc" ROW_INDEX="11"/>
+      <VARIABLE ID="MCB_DDR2" ROW_INDEX="9"/>
+      <VARIABLE ID="SPI_FLASH" ROW_INDEX="14"/>
+      <VARIABLE ID="RS232" ROW_INDEX="15"/>
+      <VARIABLE ID="axi_openmac_0" ROW_INDEX="13"/>
+      <VARIABLE ID="axi_hostinterface_0" ROW_INDEX="12"/>
+      <VARIABLE ID="fit_timer_0" IS_EXPANDED="TRUE" ROW_INDEX="17"/>
     </SEQUENCES>
   </SET>
 
