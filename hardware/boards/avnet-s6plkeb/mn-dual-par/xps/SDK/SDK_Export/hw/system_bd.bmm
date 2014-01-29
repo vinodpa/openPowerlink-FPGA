@@ -1,0 +1,46 @@
+// BMM LOC annotation file.
+//
+// Release 13.2 - Data2MEM O.61xd, build 2.2 May 20, 2011
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Processor 'ap', ID 100, memory map.
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_MAP ap MICROBLAZE-LE 100
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ap' address space 'boot_bram_block_combined' 0x00000000:0x00000FFF (4 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE boot_bram_block_combined RAMB16 [0x00000000:0x00000FFF]
+        BUS_BLOCK
+            boot_bram_block/boot_bram_block/ramb16bwer_0 [31:16] INPUT = boot_bram_block_combined_0.mem PLACED = X0Y20;
+            boot_bram_block/boot_bram_block/ramb16bwer_1 [15:0] INPUT = boot_bram_block_combined_1.mem PLACED = X0Y12;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+
+    ///////////////////////////////////////////////////////////////////////////////
+    //
+    // Processor 'ap' address space 'ap_bram_block_combined' 0x00002000:0x00003FFF (8 KBytes).
+    //
+    ///////////////////////////////////////////////////////////////////////////////
+
+    ADDRESS_SPACE ap_bram_block_combined RAMB16 [0x00002000:0x00003FFF]
+        BUS_BLOCK
+            ap_bram_block/ap_bram_block/ramb16bwer_0 [31:24] INPUT = ap_bram_block_combined_0.mem PLACED = X0Y24;
+            ap_bram_block/ap_bram_block/ramb16bwer_1 [23:16] INPUT = ap_bram_block_combined_1.mem PLACED = X0Y22;
+            ap_bram_block/ap_bram_block/ramb16bwer_2 [15:8] INPUT = ap_bram_block_combined_2.mem PLACED = X0Y6;
+            ap_bram_block/ap_bram_block/ramb16bwer_3 [7:0] INPUT = ap_bram_block_combined_3.mem PLACED = X0Y10;
+        END_BUS_BLOCK;
+    END_ADDRESS_SPACE;
+
+END_ADDRESS_MAP;
+
